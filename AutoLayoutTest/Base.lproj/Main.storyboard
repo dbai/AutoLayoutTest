@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tshirt" translatesAutoresizingMaskIntoConstraints="NO" id="Cbd-SF-x3b">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQ5-uO-d29">
+                                <rect key="frame" x="0.0" y="390" width="375" height="277"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PSD T-Shirt Mockup Template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WUS-2W-CSV">
+                                        <rect key="frame" x="15" y="15" width="345" height="35"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="z1g-Io-Hvb">
+                                        <rect key="frame" x="15" y="58" width="345" height="150.5"/>
+                                        <string key="text">This is a free psd T-shirt mockup provided by pixeden.com. The PSD comes with a plain simple tee-shirt mockup template. You can edit the t-shirt color and use the smart layer to apply your designs. The high-resolution makes it easy to frame specific details with close-ups.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="z1g-Io-Hvb" secondAttribute="trailing" constant="15" id="DQv-fK-4cI"/>
+                                    <constraint firstAttribute="trailing" secondItem="WUS-2W-CSV" secondAttribute="trailing" constant="15" id="L3z-24-Kfh"/>
+                                    <constraint firstItem="z1g-Io-Hvb" firstAttribute="leading" secondItem="cQ5-uO-d29" secondAttribute="leading" constant="15" id="PPR-v5-DPq"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="z1g-Io-Hvb" secondAttribute="bottom" constant="15" id="QSx-Jp-TIB"/>
+                                    <constraint firstItem="WUS-2W-CSV" firstAttribute="top" secondItem="cQ5-uO-d29" secondAttribute="top" constant="15" id="RLz-XG-QrI"/>
+                                    <constraint firstItem="z1g-Io-Hvb" firstAttribute="top" secondItem="WUS-2W-CSV" secondAttribute="bottom" constant="8" id="V7B-pW-zlp"/>
+                                    <constraint firstItem="WUS-2W-CSV" firstAttribute="leading" secondItem="cQ5-uO-d29" secondAttribute="leading" constant="15" id="nM2-bi-YHH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cQ5-uO-d29" firstAttribute="top" secondItem="Cbd-SF-x3b" secondAttribute="bottom" id="6Y9-qf-lWI"/>
+                            <constraint firstItem="cQ5-uO-d29" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9D6-NU-8kQ"/>
+                            <constraint firstItem="cQ5-uO-d29" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EHw-tU-ZNZ"/>
+                            <constraint firstItem="Cbd-SF-x3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="G8x-71-7gq"/>
+                            <constraint firstItem="Cbd-SF-x3b" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.585" id="bhQ-0i-lUv"/>
+                            <constraint firstItem="Cbd-SF-x3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="btD-sJ-GY8"/>
+                            <constraint firstItem="Cbd-SF-x3b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kXb-JB-Zo8"/>
+                            <constraint firstItem="cQ5-uO-d29" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uyM-Nr-Lwj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tshirt" width="512" height="432.5"/>
+    </resources>
 </document>
